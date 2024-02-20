@@ -1,19 +1,8 @@
 'use client'
 import Image from 'next/image'
 import profileImage from '/public/profile.jpg'
-import { useState } from 'react'
-import {
-	ArchiveIcon,
-	MenuIcon,
-	ConfigIcon,
-	HomeIcon,
-	PostIcon,
-	NotificationIcon,
-	DevIcon,
-	RulesIcon,
-	PrivateIcon,
-	TermsIcon,
-} from '@icons'
+import React, { useState } from 'react'
+import { MenuIcon, ConfigIcon } from '@icons'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -25,10 +14,10 @@ export default function NavBar() {
 
 	return (
 		<>
-			<div className='w-full h-fit sticky p-3 pt-6 sm:px-12 md:hidden'>
+			<div className="w-full h-fit sticky p-3 pt-6 sm:px-12 md:hidden">
 				<div
 					className={clsx(
-						'px-3 py-3 hover:bg-active rounded-xl overflow-hidden  w-fit h-fit',
+						'px-3 py-3 hover:bg-active rounded-xl overflow-hidden  w-fit h-fit'
 					)}
 					onClick={() => setOpen(!open)}
 				>
@@ -43,7 +32,10 @@ export default function NavBar() {
 					)}
 					title="aside"
 				>
-					<div title="navbar" className="px-6 py-6 md:py-24 flex flex-col h-full w-full">
+					<div
+						title="navbar"
+						className="px-6 py-6 md:py-24 flex flex-col h-full w-full"
+					>
 						<div
 							className="flex items-center justify-between h-full max-h-12"
 							title="navbar-title"
@@ -74,9 +66,9 @@ export default function NavBar() {
 								className="flex flex-col space-y-3 w-full h-fit"
 								title="navbar-profile"
 							>
-								{navigationIcons.map((item) => (
-									<>
-										<Link href={item.route} key={item.title}>
+								{navigationIcons.map((item, index) => (
+									<React.Fragment key={index.toString()}>
+										<Link href={item.route}>
 											<div
 												className={clsx(
 													'px-3 py-3  flex justify-between items-center rounded-xl cursor-pointer group relative',
@@ -118,7 +110,7 @@ export default function NavBar() {
 										{item.title == 'Archive' && (
 											<div className="bg-header w-full h-[1px]" />
 										)}
-									</>
+									</React.Fragment>
 								))}
 							</div>
 						</div>

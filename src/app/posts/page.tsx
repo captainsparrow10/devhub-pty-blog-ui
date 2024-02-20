@@ -23,15 +23,15 @@ export default function PostPage() {
 	return (
 		<div title="my post" className="flex flex-col gap-12 w-full h-fit">
 			<div title="header" className="flex h-fit space-x-3">
-				<h2>My Posts</h2>
-				<div className="bg-aside px-5 w-fit flex items-center rounded-xl">
+				<h3>My Posts</h3>
+				<div className="bg-aside px-3 w-fit flex items-center rounded-xl">
 					<h4>3</h4>
 				</div>
 			</div>
-			<div className="flex flex-col p-6 gap-6 bg-aside rounded-xl sm:flex-row">
+			<div className="flex flex-col p-6 gap-6 bg-aside rounded-xl sm:flex-row h-full">
 				<div
 					title="tags"
-					className="flex w-full overflow-hidden sm:max-w-[150px]"
+					className="flex w-full overflow-hidden sm:max-w-[150px] h-fit"
 				>
 					<div className="flex gap-3 w-full overflow-x-scroll sm:flex-col sm:overflow-x-hidden">
 						{tags.map((tag, index) => (
@@ -50,7 +50,7 @@ export default function PostPage() {
 						))}
 					</div>
 				</div>
-				<div title="posts" className="flex flex-col gap-6 w-full max-w-[600px]">
+				<div title="posts" className="flex flex-col gap-6 w-full max-w-[600px] h-full">
 					<div
 						title="post"
 						className="bg-button rounded-xl p-6 gap-6 flex flex-col"
@@ -73,10 +73,10 @@ export default function PostPage() {
 								title="post-body-tags"
 								className="flex gap-x-3 gap-y-2 flex-wrap"
 							>
-								{postTags.map((tag) => (
+								{postTags.map((tag, index) => (
 									<p
 										className="px-4 py-1 w-fit h-fit bg-background rounded-xl"
-										key={tag.title}
+										key={index.toString()}
 									>
 										{tag.title}
 									</p>

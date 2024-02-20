@@ -71,22 +71,4 @@ export const tags = [
 	{
 		title: 'prisma',
 	},
-	{
-		title: 'react',
-	},
-	{
-		title: 'nextjs',
-	},
-	{
-		title: 'angular',
-	},
-	{
-		title: 'js',
-	},
-	{
-		title: 'sanity',
-	},
-	{
-		title: 'prisma',
-	},
 ]

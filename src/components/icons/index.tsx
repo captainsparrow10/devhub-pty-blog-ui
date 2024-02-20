@@ -327,3 +327,37 @@ export const OptionIcon = ({ className }: IconType) => (
 		<path d="M12 13.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5ZM19 13.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5ZM5 13.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z" />
 	</svg>
 )
+
+export const CheckDoubleIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 24 24"
+		className={clsx('icon', className && className)}
+	>
+		<path
+			strokeLinecap="round"
+			strokeLinejoin="round"
+			strokeWidth={2}
+			d="m4 14 5 5L20 8M6 8.889 9.077 12 16 5"
+		/>
+	</svg>
+)
+
+export const CircleIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 24 24"
+		className={clsx('w-full h-full max-w-4 max-h-4 shrink-0 fill-changes', className && className)}
+	>
+		<path
+			strokeLinecap="round"
+			strokeLinejoin="round"
+			strokeWidth={2}
+			d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+		/>
+	</svg>
+)

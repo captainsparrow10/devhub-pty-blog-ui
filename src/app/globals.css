@@ -34,6 +34,12 @@
 }
 
 @layer components {
+.h5 {
+	@apply text-[12px] lg:text-[16px] font-bold text-white;
+}
+	.h6 {
+		@apply text-[10px] lg:text-[14px]  font-bold text-header
+	}
 
 	.body1 {
 		@apply text-[16px] lg:text-[20px] font-normal;
@@ -42,7 +48,7 @@
 		@apply text-[12px] lg:text-[16px] font-light;
 	}
 	.span {
-		@apply text-[12px] text-body tracking-normal font-light;
+		@apply text-[10px] lg:text-[12px] text-body tracking-normal font-light;
 	}
 	.icon {
 		@apply fill-body hover:fill-header hover:stroke-header stroke-body cursor-pointer w-full h-full max-w-6 max-h-6 shrink-0;
