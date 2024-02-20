@@ -2,32 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+	html {
+		@apply w-full  h-full;
+	}
+	body {
+		@apply h-full w-full relative;
+	}
+	h1 {
+		@apply text-[64px] -tracking-[0.015em] font-bold text-white;
+	}
+	h2 {
+		@apply text-[48px] tracking-[-0.050em] font-bold text-white leading-[56px];
+	}
+	h3 {
+		@apply text-[36px] tracking-normal font-bold text-white;
+	}
+	h4 {
+		@apply text-[24px] tracking-[0.025em] font-bold text-white leading-7;
+	}
+	h5 {
+		@apply text-[16px] tracking-[0.050em] leading-5 font-bold text-white;
+	}
+	h6 {
+		@apply text-[14px] tracking-[0.050em] font-bold text-header;
+	}
+
+	p {
+		@apply text-[14px] tracking-[0.050em] font-light;
+	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@layer components {
+	.body1 {
+		@apply text-[24px] tracking-[0.025em] font-normal;
+	}
+	.body2 {
+		@apply text-[16px] tracking-normal font-light;
+	}
+	.span {
+		@apply text-[12px] text-body tracking-normal font-light;
+	}
+	.icon {
+		@apply fill-body hover:fill-header hover:stroke-header stroke-body cursor-pointer w-full h-full max-w-6 max-h-6 shrink-0;
+	}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	.icon-active {
+		@apply fill-header stroke-header;
+	}
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.warning-text {
+		@apply text-alert text-[14px] font-normal  tracking-wider pl-2;
+	}
 }
