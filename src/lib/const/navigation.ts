@@ -13,7 +13,7 @@ export const navigationIcons = [
 	{
 		icon: HomeIcon,
 		title: 'Home',
-		route: '/',
+		route: '/home',
 	},
 	{
 		icon: PostIcon,
@@ -28,7 +28,7 @@ export const navigationIcons = [
 	{
 		icon: ArchiveIcon,
 		title: 'Archive',
-		route: '/archive',
+		route: '/archives',
 	},
 	{
 		icon: DevIcon,
@@ -53,6 +53,9 @@ export const navigationIcons = [
 ]
 
 export const tags = [
+	{
+		title: 'all',
+	},
 	{
 		title: 'react',
 	},

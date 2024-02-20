@@ -10,6 +10,7 @@ import { navigationIcons } from '@/lib/const/navigation'
 
 export default function NavBar() {
 	const pathname = usePathname()
+
 	const [open, setOpen] = useState(false)
 
 	return (
@@ -34,7 +35,7 @@ export default function NavBar() {
 				>
 					<div
 						title="navbar"
-						className="px-6 py-6 md:py-24 flex flex-col h-full w-full"
+						className="px-6 py-6 sm:py-12 lg:py-24 flex flex-col h-full w-full"
 					>
 						<div
 							className="flex items-center justify-between h-full max-h-12"
@@ -72,7 +73,7 @@ export default function NavBar() {
 											<div
 												className={clsx(
 													'px-3 py-3  flex justify-between items-center rounded-xl cursor-pointer group relative',
-													pathname == item.route
+													pathname.match(item.route)
 														? 'bg-active'
 														: 'hover:bg-hover'
 												)}
@@ -119,7 +120,8 @@ export default function NavBar() {
 						className="bg-active p-6 flex justify-between items-center w-full h-fit gap-6"
 						title="profile"
 					>
-						<div title="user" className="flex space-x-3 items-center ">
+						<Link href="/profile">
+						<div title="user" className="flex space-x-3 items-center cursor-pointer">
 							<div className="relative h-12 w-12 rounded-full overflow-hidden shrink-0">
 								<Image src={profileImage} alt="profile" fill />
 							</div>
@@ -130,6 +132,7 @@ export default function NavBar() {
 								</div>
 							)}
 						</div>
+						</Link>
 						{open && (
 							<div title="config">
 								<ConfigIcon />

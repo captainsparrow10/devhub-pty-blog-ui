@@ -20,7 +20,7 @@ export default function Button({
 		<button
 			type={type}
 			className={clsx(
-				'w-full flex justify-center items-center space-x-3 bg-button px-6 py-3 rounded-xl  hover:bg-hover active:bg-active',
+				'w-full flex justify-center items-center space-x-3 bg-button px-4 py-2 rounded-lg  hover:bg-hover active:bg-active',
 				color == 'blue' && 'bg-changes hover:bg-blue-500 active:bg-blue-800',
 				(icon == 'google' || icon == 'github') &&
 					'bg-white hover:bg-white active:bg-white'
