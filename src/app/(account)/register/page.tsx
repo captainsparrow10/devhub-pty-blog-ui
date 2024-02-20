@@ -1,11 +1,11 @@
 'use client'
 import { useForm } from 'react-hook-form'
-import Input from '../../components/inputs'
-import { loginType, registerType } from '../../types/inputs'
+import Input from '../../../components/inputs'
+import { loginType, registerType } from '../../../types/inputs'
 import { zodResolver } from '@hookform/resolvers/zod'
-import Button from '../../components/button'
+import Button from '../../../components/button'
 import Link from 'next/link'
-import { RegisterSchema } from '../../validations/registerSchema'
+import { RegisterSchema } from '../../../validations/registerSchema'
 
 export default function RegisterPage() {
 	const {
@@ -25,11 +25,11 @@ export default function RegisterPage() {
 	return (
 		<main className="bg-background w-full h-full flex flex-col relative p-3 sm:p-12 xl:p-24 py-12">
 			<div className="h-fit  w-full">
-				<h4>DebHub PTY</h4>
+				<h3>DebHub PTY</h3>
 			</div>
 			<div className="w-full h-full flex justify-center items-center">
 				<div className="flex flex-col px-3 sm:px-6 md:px-12 space-y-12 w-full max-w-[500px]  items-center">
-					<h2>Register</h2>
+					<h1>Register</h1>
 					<form
 						className="w-full h-fit flex flex-col space-y-9"
 						onSubmit={onSubmit}

@@ -5,18 +5,18 @@ export default function SearchPost() {
 	return (
 		<div
 			title="search"
-			className="w-full h-fit flex justify-between items-center rounded-xl bg-button px-4 py-3 space-x-6"
+			className="w-full h-fit flex justify-between items-center rounded-xl bg-button px-4 py-3 space-x-3"
 		>
 			<div className="flex items-center space-x-3 w-full">
 				<SearchIcon />
 				<input
-					className="text-body body2 focus:text-header w-full bg-transparent"
+					className="text-body body2 focus:text-header w-full bg-transparent whitespace-normal"
 					placeholder="What do you search today?"
 				/>
 			</div>
-			<div className="px-4 py-2 bg-hover hover:bg-active flex space-x-2 rounded-xl shrink-0 cursor-pointer group">
+			<div className="px-4 py-1 bg-hover hover:bg-active flex space-x-2 rounded-xl shrink-0 cursor-pointer group items-center">
 				<NewPostIcon className="group-hover:fill-header group-hover:stroke-header" />
-				<p className="body2 group-hover:text-white text-body">New Post</p>
+				<p className="group-hover:text-white">New Post</p>
 			</div>
 		</div>
 	)

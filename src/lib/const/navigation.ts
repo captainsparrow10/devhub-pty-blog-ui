@@ -1,11 +1,13 @@
-import { ArchiveIcon, DevIcon } from '@/components/icons'
-import HomeIcon from '@/components/icons/home'
-import NotificationIcon from '@/components/icons/notification'
-import PostIcon from '@/components/icons/post'
-import PrivateIcon from '@/components/icons/private'
-import RulesIcon from '@/components/icons/rules'
-import TermsIcon from '@/components/icons/terms'
-import { IconType } from '@/types/icon'
+import {
+	ArchiveIcon,
+	DevIcon,
+	HomeIcon,
+	NotificationIcon,
+	PostIcon,
+	PrivateIcon,
+	RulesIcon,
+	TermsIcon,
+} from '@/components/icons'
 
 export const navigationIcons = [
 	{
@@ -47,5 +49,44 @@ export const navigationIcons = [
 		icon: TermsIcon,
 		title: 'Terms of use',
 		route: '/terms',
+	},
+]
+
+export const tags = [
+	{
+		title: 'react',
+	},
+	{
+		title: 'nextjs',
+	},
+	{
+		title: 'angular',
+	},
+	{
+		title: 'js',
+	},
+	{
+		title: 'sanity',
+	},
+	{
+		title: 'prisma',
+	},
+	{
+		title: 'react',
+	},
+	{
+		title: 'nextjs',
+	},
+	{
+		title: 'angular',
+	},
+	{
+		title: 'js',
+	},
+	{
+		title: 'sanity',
+	},
+	{
+		title: 'prisma',
 	},
 ]

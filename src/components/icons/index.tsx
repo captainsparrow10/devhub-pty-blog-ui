@@ -180,7 +180,7 @@ export const NewPostIcon = ({ className }: IconType) => (
 	<svg
 		width="100%"
 		height="100%"
-    viewBox="0 0 76 76"
+		viewBox="0 0 76 76"
 		className={clsx('icon', className && className)}
 		baseProfile="full"
 		xmlns="http://www.w3.org/2000/svg"
@@ -313,5 +313,17 @@ export const TermsIcon = ({ className }: IconType) => (
 		className={clsx('icon', className && className)}
 	>
 		<path d="M12 12a6 6 0 1 0 0-12 6 6 0 1 0 0 12Zm4.49 1.528L14.25 22.5l-1.5-6.375 1.5-2.625h-4.5l1.5 2.625-1.5 6.375-2.24-8.972c-3.343.16-6.01 2.892-6.01 6.272v1.95A2.25 2.25 0 0 0 3.75 24h16.5a2.25 2.25 0 0 0 2.25-2.25V19.8c0-3.38-2.667-6.113-6.01-6.272Z" />
+	</svg>
+)
+
+export const OptionIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 24 24"
+		className={clsx('icon', className && className)}
+	>
+		<path d="M12 13.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5ZM19 13.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5ZM5 13.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z" />
 	</svg>
 )
