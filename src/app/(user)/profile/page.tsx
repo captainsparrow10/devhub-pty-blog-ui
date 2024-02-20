@@ -11,12 +11,9 @@ export default function ProfilePage() {
 	return (
 		<div
 			title="profile"
-			className="bg-aside rounded-xl h-fit w-full p-3 py-6 flex flex-col gap-6"
+			className="bg-aside rounded-xl h-fit w-full p-3 py-6 md:p-6 flex flex-col gap-6"
 		>
-			<div
-				title="background"
-				className="relative w-full h-[250px]"
-			>
+			<div title="background" className="relative w-full h-[250px]">
 				<Image src={backgroundImage} alt="background" fill />
 				<div className="absolute h-12 w-12 rounded-full overflow-hidden shrink-0 border-white border -bottom-3 left-2">
 					<Image src={profileImage} alt="profile" fill />
