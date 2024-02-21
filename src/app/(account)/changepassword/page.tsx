@@ -1,12 +1,11 @@
 'use client'
 import { useForm } from 'react-hook-form'
 import Input from '../../../components/inputs'
-import { changePasswordType, loginType, registerType } from '../../../types/inputs'
+import { changePasswordType } from '../../../types/inputs'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Button from '../../../components/button'
 import Link from 'next/link'
-import { RegisterSchema } from '../../../validations/registerSchema'
-import { verificationEmailSchema } from '../../../validations/changePassword'
+import { ChangePasswordSchema } from '../../../validations/changePassword'
 
 export default function ChangePasswordPage() {
 	const {
@@ -14,7 +13,7 @@ export default function ChangePasswordPage() {
 		handleSubmit,
 		formState: { errors },
 	} = useForm<changePasswordType>({
-		resolver: zodResolver(verificationEmailSchema),
+		resolver: zodResolver(ChangePasswordSchema),
 	})
 
 	const onSubmit = handleSubmit((data: changePasswordType) => {

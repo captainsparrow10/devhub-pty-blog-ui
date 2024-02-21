@@ -1,12 +1,12 @@
 import { z } from "zod";
 
-export const verificationEmailSchema = z.object({
+export const VerificationEmailSchema = z.object({
   email: z.string().email({
     message: "Email is required",
   }),
 });
 
-export const changePasswordSchema= z.object({
+export const ChangePasswordSchema= z.object({
   email: z.string().email({
     message: "Email is required",
   }),

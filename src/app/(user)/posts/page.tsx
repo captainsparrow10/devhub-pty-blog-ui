@@ -1,6 +1,5 @@
 import OwnPost from '@/components/post/own'
 import FilterTags from '@/components/post/tags'
-
 export default function PostPage() {
 	return (
 		<div title="my post" className="flex flex-col gap-12 w-full h-fit">

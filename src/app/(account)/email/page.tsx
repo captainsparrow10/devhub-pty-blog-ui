@@ -1,12 +1,10 @@
 'use client'
 import { useForm } from 'react-hook-form'
 import Input from '../../../components/inputs'
-import { loginType, registerType } from '../../../types/inputs'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Button from '../../../components/button'
 import Link from 'next/link'
-import { RegisterSchema } from '../../../validations/registerSchema'
-import { verificationEmailSchema } from '../../../validations/changePassword'
+import { VerificationEmailSchema } from '../../../validations/changePassword'
 
 type Input = {
 	email: string
@@ -17,7 +15,7 @@ export default function VerificationEmailPage() {
 		handleSubmit,
 		formState: { errors },
 	} = useForm<Input>({
-		resolver: zodResolver(verificationEmailSchema),
+		resolver: zodResolver(VerificationEmailSchema),
 	})
 
 	const onSubmit = handleSubmit((data: Input) => {

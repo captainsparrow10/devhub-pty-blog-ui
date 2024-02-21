@@ -2,9 +2,12 @@ import {
 	ArchiveIcon,
 	DevIcon,
 	HomeIcon,
+	LogOutIcon,
 	NotificationIcon,
 	PostIcon,
 	PrivateIcon,
+	ProfileIcon,
+	ReturnIcon,
 	RulesIcon,
 	TermsIcon,
 } from '@/components/icons'
@@ -49,6 +52,21 @@ export const navigationIcons = [
 		icon: TermsIcon,
 		title: 'Terms of use',
 		route: '/terms',
+	},
+]
+
+export const configIcons = [
+	{
+		icon: ProfileIcon,
+		title: 'profile',
+	},
+	{
+		icon: ReturnIcon,
+		title: 'back',
+	},
+	{
+		icon: LogOutIcon,
+		title: 'log out',
 	},
 ]
 

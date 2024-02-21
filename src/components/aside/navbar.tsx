@@ -3,15 +3,18 @@ import Image from 'next/image'
 import profileImage from '/public/profile.jpg'
 import React, { useState } from 'react'
 import { MenuIcon, ConfigIcon } from '@icons'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import clsx from 'clsx'
-import { navigationIcons } from '@/lib/const/navigation'
+import { configIcons, navigationIcons } from '@/lib/const/navigation'
+import { usePreviewUrl } from '@/lib/store/previewUrl'
 
 export default function NavBar() {
 	const pathname = usePathname()
-
+	const saveUrl = usePreviewUrl((state) => state.saveUrl)
+	const url = usePreviewUrl((state) => state.previewUrl)
 	const [open, setOpen] = useState(false)
+	const router = useRouter()
 
 	return (
 		<>
@@ -28,8 +31,10 @@ export default function NavBar() {
 			<div className="h-full w-fit shrink-0 absolute md:relative z-50">
 				<div
 					className={clsx(
-						'max-w-[350px] bg-aside flex-col transition-all ease-in-out duration-500 overflow-hidden h-full',
-						open ? 'w-full flex z-50' : 'w-24 hidden md:flex'
+						' bg-aside flex-col transition-all overflow-hidden h-full',
+						open
+							? 'w-[350px] flex z-50 ease-in duration-300 '
+							: 'md:w-24 md:flex ease-out duration-300 w-0'
 					)}
 					title="aside"
 				>
@@ -67,13 +72,18 @@ export default function NavBar() {
 								className="flex flex-col space-y-3 w-full h-fit"
 								title="navbar-profile"
 							>
-								{navigationIcons.map((item, index) => (
-									<React.Fragment key={index.toString()}>
-										<Link href={item.route}>
+								{pathname.match('/config')
+									? configIcons.map((item, index) => (
 											<div
+												key={index.toString()}
+												onClick={()=> {
+													if (item.title == "back") {
+														router.push(url)
+													}
+												}}
 												className={clsx(
 													'px-3 py-3  flex justify-between items-center rounded-xl cursor-pointer group relative',
-													pathname.match(item.route)
+													item.title == 'profile'
 														? 'bg-active'
 														: 'hover:bg-hover'
 												)}
@@ -81,38 +91,69 @@ export default function NavBar() {
 												<div className="flex space-x-4 items-center">
 													<item.icon
 														className={
-															pathname == item.route
+															item.title == 'profile'
 																? 'icon-active'
 																: 'group-hover:fill-header group-hover:stroke-header'
 														}
 													/>
 													<p
 														className={clsx(
-															'body2 text-body group-hover:text-header shrink-0',
-															pathname == item.route && 'text-header',
+															'body2 text-body group-hover:text-header shrink-0 capitalize',
+															item.title == 'profile' && 'text-header',
 															!open && 'hidden'
 														)}
 													>
 														{item.title}
 													</p>
 												</div>
-												{item.title == 'Notifications' && (
-													<h6
+											</div>
+									  ))
+									: navigationIcons.map((item, index) => (
+											<React.Fragment key={index.toString()}>
+												<Link href={item.route}>
+													<div
 														className={clsx(
-															'rounded-full bg-changes header px-2',
-															open ? 'flex' : 'absolute top-2 left-6'
+															'px-3 py-3  flex justify-between items-center rounded-xl cursor-pointer group relative',
+															pathname.match(item.route)
+																? 'bg-active'
+																: 'hover:bg-hover'
 														)}
 													>
-														5
-													</h6>
+														<div className="flex space-x-4 items-center">
+															<item.icon
+																className={
+																	pathname == item.route
+																		? 'icon-active'
+																		: 'group-hover:fill-header group-hover:stroke-header'
+																}
+															/>
+															<p
+																className={clsx(
+																	'body2 text-body group-hover:text-header shrink-0',
+																	pathname == item.route && 'text-header',
+																	!open && 'hidden'
+																)}
+															>
+																{item.title}
+															</p>
+														</div>
+														{item.title == 'Notifications' && (
+															<h6
+																className={clsx(
+																	'rounded-full bg-changes header px-2',
+																	open ? 'flex' : 'absolute top-2 left-6'
+																)}
+															>
+																5
+															</h6>
+														)}
+													</div>
+												</Link>
+												{item.title == 'Archive' && (
+													<div className="bg-header w-full h-[1px]" />
 												)}
-											</div>
-										</Link>
-										{item.title == 'Archive' && (
-											<div className="bg-header w-full h-[1px]" />
-										)}
-									</React.Fragment>
-								))}
+											</React.Fragment>
+									  ))}
 							</div>
 						</div>
 					</div>
@@ -121,22 +162,29 @@ export default function NavBar() {
 						title="profile"
 					>
 						<Link href="/profile">
-						<div title="user" className="flex space-x-3 items-center cursor-pointer">
-							<div className="relative h-12 w-12 rounded-full overflow-hidden shrink-0">
-								<Image src={profileImage} alt="profile" fill />
-							</div>
-							{open && (
-								<div className="flex flex-col space-y-1 shrink-0">
-									<h5>John Doe</h5>
-									<p className="span">your&apos;e the hero in your own story</p>
+							<div
+								title="user"
+								className="flex space-x-3 items-center cursor-pointer"
+							>
+								<div className="relative h-12 w-12 rounded-full overflow-hidden shrink-0">
+									<Image src={profileImage} alt="profile" fill />
 								</div>
-							)}
-						</div>
+								{open && (
+									<div className="flex flex-col space-y-1 shrink-0">
+										<h5>John Doe</h5>
+										<p className="span">
+											your&apos;e the hero in your own story
+										</p>
+									</div>
+								)}
+							</div>
 						</Link>
 						{open && (
-							<div title="config">
-								<ConfigIcon />
-							</div>
+							<Link href="/config" onClick={() => saveUrl(pathname)}>
+								<div title="config">
+									<ConfigIcon />
+								</div>
+							</Link>
 						)}
 					</div>
 				</div>

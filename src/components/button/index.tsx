@@ -7,6 +7,7 @@ type Props = {
 	type?: 'submit' | 'reset' | 'button'
 	color?: 'default' | 'blue'
 	icon?: 'google' | 'github' | 'send'
+	size?: 'default' | 'sm'
 	onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined
 }
 export default function Button({
@@ -14,14 +15,16 @@ export default function Button({
 	type,
 	onClick,
 	color,
+	size,
 	icon,
 }: Props) {
 	return (
 		<button
 			type={type}
 			className={clsx(
-				'w-full flex justify-center items-center space-x-3 bg-button px-4 py-2 rounded-lg  hover:bg-hover active:bg-active',
+				'flex justify-center items-center space-x-3 bg-button px-4 py-2 rounded-lg  hover:bg-hover active:bg-active',
 				color == 'blue' && 'bg-changes hover:bg-blue-500 active:bg-blue-800',
+				size == 'sm' ? 'w-fit' : 'w-full',
 				(icon == 'google' || icon == 'github') &&
 					'bg-white hover:bg-white active:bg-white'
 			)}

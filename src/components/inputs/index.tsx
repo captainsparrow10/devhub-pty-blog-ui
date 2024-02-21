@@ -8,7 +8,7 @@ type Props = {
 	register: UseFormRegister<any>
 	label: string
 	type: 'text' | 'email' | 'password'
-	valueInput: 'name' | 'email' | 'password' | 'confirmPassword' | 'userName'
+	valueInput: 'name' | 'email' | 'password' | 'confirmPassword' | 'username' 
 	placeholder: string
 	forgot?: boolean
 	value?: string | undefined
