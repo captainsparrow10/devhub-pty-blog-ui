@@ -34,11 +34,11 @@
 }
 
 @layer components {
-.h5 {
-	@apply text-[12px] lg:text-[16px] font-bold text-white;
-}
+	.h5 {
+		@apply text-[12px] lg:text-[16px] font-bold text-white;
+	}
 	.h6 {
-		@apply text-[10px] lg:text-[14px]  font-bold text-header
+		@apply text-[10px] lg:text-[14px]  font-bold text-header;
 	}
 
 	.body1 {
@@ -53,6 +53,9 @@
 	.icon {
 		@apply fill-body hover:fill-header hover:stroke-header stroke-body cursor-pointer w-full h-full max-w-6 max-h-6 shrink-0;
 	}
+	.icon-button {
+		@apply px-4 py-3 hover:bg-hover rounded-xl overflow-hidden  w-fit h-fit;
+	}
 
 	.icon-active {
 		@apply fill-header stroke-header;
@@ -62,5 +65,8 @@
 @layer utilities {
 	.warning-text {
 		@apply text-alert text-[14px] font-normal  tracking-wider pl-2;
+	}
+	.button-icons {
+		@apply px-3 py-3 hover:bg-active rounded-xl overflow-hidden  w-fit h-fit;
 	}
 }

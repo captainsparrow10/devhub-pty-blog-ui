@@ -23,7 +23,7 @@ export default function Button({
 			type={type}
 			className={clsx(
 				'flex justify-center items-center space-x-3 bg-button px-4 py-2 rounded-lg  hover:bg-hover active:bg-active',
-				color == 'blue' && 'bg-changes hover:bg-blue-500 active:bg-blue-800',
+				color == 'blue' && 'bg-blue-500 hover:bg-blue-600 active:bg-blue-800',
 				size == 'sm' ? 'w-fit' : 'w-full',
 				(icon == 'google' || icon == 'github') &&
 					'bg-white hover:bg-white active:bg-white'

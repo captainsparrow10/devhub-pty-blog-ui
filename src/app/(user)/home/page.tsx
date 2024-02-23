@@ -1,4 +1,3 @@
-import NavBar from '../../../components/aside/navbar'
 import SearchPost from '../../../components/post/search'
 import FilterPost from '../../../components/post/filter'
 import Post from '../../../components/post'
