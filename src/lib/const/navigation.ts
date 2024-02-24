@@ -33,26 +33,6 @@ export const navigationIcons = [
 		title: 'Archive',
 		route: '/archives',
 	},
-	{
-		icon: DevIcon,
-		title: 'About',
-		route: '/about',
-	},
-	{
-		icon: RulesIcon,
-		title: 'Rules',
-		route: '/rules',
-	},
-	{
-		icon: PrivateIcon,
-		title: 'Privacy Policy',
-		route: '/private',
-	},
-	{
-		icon: TermsIcon,
-		title: 'Terms of use',
-		route: '/terms',
-	},
 ]
 
 export const configIcons = [
