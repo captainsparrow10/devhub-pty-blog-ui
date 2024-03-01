@@ -19,7 +19,7 @@ export default function FilterPost() {
 		},
 	]
 	return (
-		<div title="topics" className="flex space-x-6 items-center">
+		<div title="topics" className="flex space-x-6 items-center w-full h-fit">
 			{topics.map((topic) => (
 				<h4
 					key={topic.title}

@@ -1,18 +1,14 @@
 'use client'
-import {
-	FieldErrors,
-	UseFormGetFieldState,
-	UseFormRegister,
-} from 'react-hook-form'
-import EyesCloseIcon from '../icons/eyesClose'
+import { FieldErrors, UseFormRegister } from 'react-hook-form'
 import { ChangeEvent, useState } from 'react'
-import EyesOpenIcon from '../icons/eyesOpen'
+
 import clsx from 'clsx'
+import { EyesCloseIcon, EyesOpenIcon } from '../icons'
 type Props = {
 	register: UseFormRegister<any>
 	label: string
 	type: 'text' | 'email' | 'password'
-	valueInput: 'name' | 'email' | 'password' | 'confirmPassword' | 'userName'
+	valueInput: 'name' | 'email' | 'password' | 'confirmPassword' | 'username' 
 	placeholder: string
 	forgot?: boolean
 	value?: string | undefined
@@ -58,9 +54,9 @@ const Input = ({
 						onClick={() => setOpen(!open)}
 					>
 						{open && data?.length > 0 ? (
-							<EyesOpenIcon height={24} width={24} className="icon-active" />
+							<EyesOpenIcon className="icon-active" />
 						) : (
-							<EyesCloseIcon height={24} width={24} className="icon" />
+							<EyesCloseIcon />
 						)}
 					</div>
 				)}

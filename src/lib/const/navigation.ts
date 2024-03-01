@@ -1,17 +1,22 @@
-import { ArchiveIcon, DevIcon } from '@/components/icons'
-import HomeIcon from '@/components/icons/home'
-import NotificationIcon from '@/components/icons/notification'
-import PostIcon from '@/components/icons/post'
-import PrivateIcon from '@/components/icons/private'
-import RulesIcon from '@/components/icons/rules'
-import TermsIcon from '@/components/icons/terms'
-import { IconType } from '@/types/icon'
+import {
+	ArchiveIcon,
+	DevIcon,
+	HomeIcon,
+	LogOutIcon,
+	NotificationIcon,
+	PostIcon,
+	PrivateIcon,
+	ProfileIcon,
+	ReturnIcon,
+	RulesIcon,
+	TermsIcon,
+} from '@/components/icons'
 
 export const navigationIcons = [
 	{
 		icon: HomeIcon,
 		title: 'Home',
-		route: '/',
+		route: '/home',
 	},
 	{
 		icon: PostIcon,
@@ -26,26 +31,45 @@ export const navigationIcons = [
 	{
 		icon: ArchiveIcon,
 		title: 'Archive',
-		route: '/archive',
+		route: '/archives',
+	},
+]
+
+export const configIcons = [
+	{
+		icon: ProfileIcon,
+		title: 'profile',
 	},
 	{
-		icon: DevIcon,
-		title: 'About',
-		route: '/about',
+		icon: ReturnIcon,
+		title: 'back',
 	},
 	{
-		icon: RulesIcon,
-		title: 'Rules',
-		route: '/rules',
+		icon: LogOutIcon,
+		title: 'log out',
+	},
+]
+
+export const tags = [
+	{
+		title: 'all',
 	},
 	{
-		icon: PrivateIcon,
-		title: 'Privacy Policy',
-		route: '/private',
+		title: 'react',
 	},
 	{
-		icon: TermsIcon,
-		title: 'Terms of use',
-		route: '/terms',
+		title: 'nextjs',
+	},
+	{
+		title: 'angular',
+	},
+	{
+		title: 'js',
+	},
+	{
+		title: 'sanity',
+	},
+	{
+		title: 'prisma',
 	},
 ]

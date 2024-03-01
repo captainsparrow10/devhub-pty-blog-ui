@@ -3,57 +3,75 @@
 @tailwind utilities;
 
 @layer base {
-	html {
-		@apply w-full  h-full;
-	}
-	body {
-		@apply h-full w-full relative;
-	}
-	h1 {
-		@apply text-[64px] -tracking-[0.015em] font-bold text-white;
-	}
-	h2 {
-		@apply text-[48px] tracking-[-0.050em] font-bold text-white leading-[56px];
-	}
-	h3 {
-		@apply text-[36px] tracking-normal font-bold text-white;
-	}
-	h4 {
-		@apply text-[24px] tracking-[0.025em] font-bold text-white leading-7;
-	}
-	h5 {
-		@apply text-[16px] tracking-[0.050em] leading-5 font-bold text-white;
-	}
-	h6 {
-		@apply text-[14px] tracking-[0.050em] font-bold text-header;
-	}
+  html {
+    @apply h-full  w-full;
+  }
+  body {
+    @apply relative h-full w-full;
+  }
+  h1 {
+    @apply text-[48px]   font-bold text-white;
+  }
+  h2 {
+    @apply text-[36px]   font-bold text-white;
+  }
+  h3 {
+    @apply text-[30px]   font-bold text-white;
+  }
+  h4 {
+    @apply text-[24px]  font-bold text-white;
+  }
+  h5 {
+    @apply text-[16px]  font-bold text-white;
+  }
+  h6 {
+    @apply text-[14px]   font-bold text-header;
+  }
 
-	p {
-		@apply text-[14px] tracking-[0.050em] font-light;
-	}
+  p {
+    @apply text-[12px] font-light text-body;
+  }
 }
 
 @layer components {
-	.body1 {
-		@apply text-[24px] tracking-[0.025em] font-normal;
-	}
-	.body2 {
-		@apply text-[16px] tracking-normal font-light;
-	}
-	.span {
-		@apply text-[12px] text-body tracking-normal font-light;
-	}
-	.icon {
-		@apply fill-body hover:fill-header hover:stroke-header stroke-body cursor-pointer w-full h-full max-w-6 max-h-6 shrink-0;
-	}
+  .body1 {
+    @apply text-[24px] font-normal leading-relaxed;
+  }
+  .body2 {
+    @apply text-[16px] font-light leading-relaxed;
+  }
+  .caption {
+    @apply text-[12px]  font-normal tracking-normal;
+  }
+  .icon {
+    @apply h-6 w-6 shrink-0 cursor-pointer fill-body stroke-body hover:fill-header hover:stroke-header;
+  }
+  .icon-button {
+    @apply h-fit w-fit overflow-hidden rounded-xl px-4 py-3 hover:bg-hover;
+  }
 
-	.icon-active {
-		@apply fill-header stroke-header;
-	}
+  .icon-active {
+    @apply fill-header stroke-header;
+  }
 }
 
 @layer utilities {
-	.warning-text {
-		@apply text-alert text-[14px] font-normal  tracking-wider pl-2;
-	}
+  .warning-text {
+    @apply pl-2 text-[14px] font-normal  tracking-wider text-alert;
+  }
+  .button-icons {
+    @apply h-fit w-fit overflow-hidden rounded-xl px-3  py-3 hover:bg-active;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #FFFF;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #282b30;
+  }
 }

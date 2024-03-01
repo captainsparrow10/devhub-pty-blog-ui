@@ -180,7 +180,7 @@ export const NewPostIcon = ({ className }: IconType) => (
 	<svg
 		width="100%"
 		height="100%"
-    viewBox="0 0 76 76"
+		viewBox="0 0 76 76"
 		className={clsx('icon', className && className)}
 		baseProfile="full"
 		xmlns="http://www.w3.org/2000/svg"
@@ -236,8 +236,7 @@ export const ReturnIcon = ({ className }: IconType) => (
 		viewBox="0 0 24 24"
 		className={clsx('icon', className && className)}
 	>
-		<path fill="none" d="M0 0h48v48H0z" />
-		<path d="M10 22v2c0 7.72 6.28 14 14 14s14-6.28 14-14-6.28-14-14-14h-6.662l3.474-4.298-3.11-2.515L10.577 12l7.125 8.813 3.11-2.515L17.338 14H24c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10v-2h-4z" />
+		<path d="m4 10-.707.707L2.586 10l.707-.707L4 10Zm17 8a1 1 0 1 1-2 0h2ZM8.293 15.707l-5-5 1.414-1.414 5 5-1.414 1.414Zm-5-6.414 5-5 1.414 1.414-5 5-1.414-1.414ZM4 9h10v2H4V9Zm17 7v2h-2v-2h2Zm-7-7a7 7 0 0 1 7 7h-2a5 5 0 0 0-5-5V9Z" />
 	</svg>
 )
 
@@ -313,5 +312,121 @@ export const TermsIcon = ({ className }: IconType) => (
 		className={clsx('icon', className && className)}
 	>
 		<path d="M12 12a6 6 0 1 0 0-12 6 6 0 1 0 0 12Zm4.49 1.528L14.25 22.5l-1.5-6.375 1.5-2.625h-4.5l1.5 2.625-1.5 6.375-2.24-8.972c-3.343.16-6.01 2.892-6.01 6.272v1.95A2.25 2.25 0 0 0 3.75 24h16.5a2.25 2.25 0 0 0 2.25-2.25V19.8c0-3.38-2.667-6.113-6.01-6.272Z" />
+	</svg>
+)
+
+export const OptionIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 24 24"
+		className={clsx('icon', className && className)}
+	>
+		<path d="M12 13.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5ZM19 13.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5ZM5 13.75a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z" />
+	</svg>
+)
+
+export const CheckDoubleIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 24 24"
+		className={clsx('icon', className && className)}
+	>
+		<path
+			strokeLinecap="round"
+			strokeLinejoin="round"
+			strokeWidth={2}
+			d="m4 14 5 5L20 8M6 8.889 9.077 12 16 5"
+		/>
+	</svg>
+)
+
+export const CircleIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 24 24"
+		className={clsx(
+			'w-full h-full max-w-4 max-h-4 shrink-0 fill-changes',
+			className && className
+		)}
+	>
+		<path
+			strokeLinecap="round"
+			strokeLinejoin="round"
+			strokeWidth={2}
+			d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+		/>
+	</svg>
+)
+
+export const TrashIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 24 24"
+		className={clsx('icon', className && className)}
+	>
+		<path
+			strokeLinecap="round"
+			strokeLinejoin="round"
+			strokeWidth={2}
+			d="m18 6-.8 12.013c-.071 1.052-.106 1.578-.333 1.977a2 2 0 0 1-.866.81c-.413.2-.94.2-1.995.2H9.994c-1.055 0-1.582 0-1.995-.2a2 2 0 0 1-.866-.81c-.227-.399-.262-.925-.332-1.977L6 6M4 6h16m-4 0-.27-.812c-.263-.787-.394-1.18-.637-1.471a2 2 0 0 0-.803-.578C13.938 3 13.524 3 12.694 3h-1.388c-.829 0-1.244 0-1.596.139a2 2 0 0 0-.803.578c-.243.29-.374.684-.636 1.471L8 6m6 4v7m-4-7v7"
+		/>
+	</svg>
+)
+
+export const ProfileIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 24 24"
+		className={clsx('icon', className && className)}
+	>
+		<g
+			fill="none"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+			strokeWidth={1.5}
+		>
+			<path d="M12.12 12.78a.963.963 0 0 0-.24 0 3.27 3.27 0 0 1-3.16-3.27c0-1.81 1.46-3.28 3.28-3.28a3.276 3.276 0 0 1 .12 6.55ZM18.74 19.38A9.934 9.934 0 0 1 12 22c-2.6 0-4.96-.99-6.74-2.62.1-.94.7-1.86 1.77-2.58 2.74-1.82 7.22-1.82 9.94 0 1.07.72 1.67 1.64 1.77 2.58Z" />
+			<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z" />
+		</g>
+	</svg>
+)
+
+export const LogOutIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 24 24"
+		className={clsx('icon', className && className)}
+	>
+		<path
+			fill="none"
+			strokeLinecap="round"
+			strokeWidth={2}
+			d="M16 6.07a8 8 0 1 1-8 0M12 3v10"
+		/>
+	</svg>
+)
+
+export const ResetIcon = ({ className }: IconType) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="100%"
+		height="100%"
+		viewBox="0 0 48 48"
+		className={clsx('icon', className && className)}
+	>
+		<path fill="none" d="M0 0h48v48H0z" />
+		<path d="M10 22v2c0 7.72 6.28 14 14 14s14-6.28 14-14-6.28-14-14-14h-4V4l-8 8 8 8v-6h4c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10v-2h-4z" />
 	</svg>
 )
